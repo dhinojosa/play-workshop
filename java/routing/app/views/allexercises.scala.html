@@ -1,0 +1,20 @@
+@(exercises: java.util.List[Exercise])
+
+@template(title = "Show all exercises") {
+    <table id='exercises_list' class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Minutes</th>
+            </tr>
+        </thead>
+        <tbody>
+        @for(exercise <- exercises) {
+            <tr>
+                <td>@exercise.getName</td>
+                <td>@exercise.getMinutes</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}

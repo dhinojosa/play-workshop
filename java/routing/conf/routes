@@ -1,0 +1,29 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                        controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file            controllers.Assets.at(path="/public", file)
+
+GET         /welcome                 controllers.FitnessController.welcome()
+
+GET         /welcome/:name           controllers.FitnessController.welcomeWithName(name:String)
+
+GET         /exerciseoftheday        controllers.FitnessController.exerciseOfTheDay()
+
+GET         /workoutoftheday         controllers.FitnessController.workoutOfTheDay()
+
+GET         /exercise/create         controllers.FitnessController.initExercise()
+
+POST        /exercise/create         controllers.FitnessController.createExercise()
+
+GET         /exercises               controllers.FitnessController.getList()
+
+GET         /exercises.json          controllers.FitnessController.getJsonList()
+
+GET         /exercises.xml           controllers.FitnessController.getXMLList()
+
+GET         /ws                      controllers.FitnessController.wsCall()

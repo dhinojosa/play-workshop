@@ -1,0 +1,19 @@
+@(title: String)(content: Html)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <link href="@routes.Assets.at("stylesheets/bootstrap.min.css")" rel="stylesheet"/>
+        <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")"></script>
+        <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+        <link href="@routes.Assets.at("stylesheets/mystyles.min.css")" rel="stylesheet"/>
+        <script src="@routes.Assets.at("javascripts/mywebsocket.min.js")"></script>
+    </head>
+    <body>
+        <img src="http://www.startrek.com/legacy_media/images/200508/tng-142-j25-borg-cube/320x240.jpg" class="img-polaroid">
+        <h1>Welcome to Borg Fitness</h1>
+        <div id="server_msg"></div>
+        <div id="flash_msg">@flash.get("flash_status")</div>
+        <div>@content</div>
+    </body>
+</html>

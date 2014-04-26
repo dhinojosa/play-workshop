@@ -1,0 +1,16 @@
+@(form: play.data.Form[Exercise])
+
+@template(title="Create a new Exercise") {
+    @helper.form(action = routes.FitnessController.createExercise(), 'id -> "exercise_form") {
+        <div>
+            @helper.inputText(form("name"), '_id -> "name", '_label -> "Name:",
+                                            '_showConstraints -> false)
+        </div>
+        <div>
+            @helper.inputText(form("minutes"), '_id -> "minutes", '_label -> "Minutes:",
+                                               '_showConstraints -> false)
+
+        </div>
+        <input id="submit" name="submit" type="submit" value="Create"/>
+    }
+}
